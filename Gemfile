@@ -20,6 +20,10 @@ gem 'font-awesome-rails'
 # JS Stuff
 gem 'jquery-rails'
 
+# Other
+gem 'devise' # User Management
+gem 'paperclip' # Attachments & Avatars
+
 # Testing Dependencies
 group :development, :test do
   gem 'capybara', '~> 2.13'
@@ -28,7 +32,6 @@ end
 
 # Development Dependencies
 group :development do
-  # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'
