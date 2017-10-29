@@ -1,0 +1,11 @@
+/* Require Bootstrap & Bootswatch */
+@import "patch/make_bootswatch_alpha_work_on_bootstrap_beta";
+
+$brand-primary: #1F114C;
+
+@import "bootswatch/minty/variables";
+@import "bootstrap";
+@import "bootswatch/minty/bootswatch";
+
+/* Require other dependencies */
+@import "font-awesome";

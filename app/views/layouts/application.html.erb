@@ -1,14 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="<%= I18n.locale %>">
   <head>
-    <title>Railstastic</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="/favicon.ico">
     <%= csrf_meta_tags %>
+
+    <title>Railstastic</title>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+
+    <header>
+      <div class="navbar navbar-dark bg-dark">
+        <div class="container d-flex justify-content-between">
+          <a href="#" class="navbar-brand"><i class="fa fa-pied-piper" aria-hidden="true"></i> Rails Tastic</a>
+        </div>
+      </div>
+    </header>
+
+    <main role="main">
+      <%= yield %>
+    </main>
+
+    <footer class="text-muted">
+      <div class="container">
+        <p class="float-right">
+          <a href="https://github.com/b1nary/railstastic">Railstastic</a> by <a href="https://twitter.com/talkb1nary">@talkb1nary</a>
+        </p>
+        <p>&copy; <%= [2017, Time.now.year].uniq.join(', ') %> RailsTastic</p>
+      </div>
+    </footer>
+
+    <%= console if params.key?(:console) %>
   </body>
 </html>

@@ -12,6 +12,14 @@ gem 'jbuilder', '~> 2.5'
 # Database
 gem 'sqlite3'
 
+# Design & Assets
+gem 'bootstrap', '~> 4.0.0.beta2.1'
+gem 'bootswatch'
+gem 'font-awesome-rails'
+
+# JS Stuff
+gem 'jquery-rails'
+
 # Testing Dependencies
 group :development, :test do
   gem 'capybara', '~> 2.13'
